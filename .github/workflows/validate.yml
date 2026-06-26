@@ -47,7 +47,7 @@ jobs:
         run: terraform validate
 
       - name: Run Trivy Security Scanner (Terraform)
-        uses: aquasecurity/trivy-action@0.18.0
+        uses: aquasecurity/trivy-action@v0.18.0
         with:
           scan-type: 'config'
           hide-progress: true
