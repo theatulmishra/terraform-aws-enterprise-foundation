@@ -47,10 +47,9 @@ jobs:
         run: terraform validate
 
       - name: Run Trivy Security Scanner (Terraform)
-        uses: aquasecurity/trivy-action@v0.18.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           scan-type: 'config'
-          hide-progress: true
           format: 'sarif'
           output: 'trivy-results.sarif'
           exit-code: '0' # Soft-fail or alert-only during initial setup. Change to 1 to break CI.
